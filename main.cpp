@@ -20,6 +20,47 @@ void countSort(int array[], int size); // Sortowanie przez zliczanie.
 
 int main()
 {
+    cout << "Podaj liczbe elementow, ktore po wylosowaniu zostana posortowane." << endl;
+
+    int size;
+    cin >> size;
+
+    if (size > 1)
+    {
+        int array[size], i = 0;
+        generateRandomData(array, size, getRandomNumber(0, 50));
+
+        int heapArray[size], countArray[size];
+
+        copy(array, array + size, heapArray);
+        copy(array, array + size, countArray);
+
+        heapSort(heapArray, size);
+        countSort(countArray, size);
+
+        cout << endl << "Przed posortowaniem:";
+        for (; i < size; i++)
+        {
+            cout << " " << array[i];
+        }
+
+        cout << endl << "Sortowanie przez kopcowanie:";
+        for (i = 0; i < size; i++)
+        {
+            cout << " " << heapArray[i];
+        }
+
+        cout << endl << "Sortowanie przez zliczanie:";
+        for (i = 0; i < size; i++)
+        {
+            cout << " " << countArray[i];
+        }
+    }
+    else
+    {
+        cout << "Liczba elementow musi byc wieksza od 1!" << endl;
+    }
+
     return 0;
 }
 
