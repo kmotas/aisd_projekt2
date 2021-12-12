@@ -15,8 +15,9 @@ void generateRandomData(int array[], int size, int max); // Uzupełnianie tablic
 void heapify(int array[], int size, int i); // Budowanie kopca.
 void heapSort(int array[], int size); // Sortowanie przez kopcowanie.
 
-int getMax(int array[], int size); // Zwraca największą wartość w tablicy.
 void countSort(int array[], int size); // Sortowanie przez zliczanie.
+
+const int N = 1000; // Stała przechowująca największą możliwą wartość sortowanego elementu.
 
 int main()
 {
@@ -102,21 +103,6 @@ void heapSort(int array[], int size)
     }
 }
 
-int getMax(int array[], int size)
-{
-    int max = array[0];
-
-    for (int i = 1; i < size; i++)
-    {
-        if (array[i] > max)
-        {
-            max = array[i];
-        }
-    }
-
-    return max;
-}
-
 void countSort(int array[], int size)
 {
     int
@@ -125,14 +111,11 @@ void countSort(int array[], int size)
         // Tablica, która będzie przechowywała posortowane liczby.
         *output = new int[size],
 
-        // Zmienna przechowująca największą wartość w array.
-        max = getMax(array, size),
-
         // Tablica, która będzie przechowywała liczbę wystąpień każdego z elementów.
-        *count = new int[max + 1];
+        count[N + 1];
 
     // Iniciujemy tablicę count.
-    for (i = 0; i <= max; i++)
+    for (i = 0; i <= N; i++)
     {
         count[i] = 0;
     }
@@ -144,7 +127,7 @@ void countSort(int array[], int size)
     }
 
     // Zmieniamy count[i], tak żeby zawierało aktualną pozycję tej liczby w tablicy output.
-    for (i = 1; i <= max; i++)
+    for (i = 1; i <= N; i++)
     {
         count[i] += count[i - 1];
     }
@@ -162,9 +145,8 @@ void countSort(int array[], int size)
         array[i] = output[i];
     }
 
-    // Usuwamy dynamiczne tablice.
+    // Usuwamy dynamiczną tablicę.
     delete [] output;
-    delete [] count;
 }
 
 void loadDataFromFile(string fileName, int array[], int size)
