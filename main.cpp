@@ -4,6 +4,8 @@
 #include <fstream> // Funkcje do obsługi plików tekstowych.
 #include <time.h> // clock
 
+#define TIME_TESTS true // true - jeśli chcemy wykonać porównanie algorytmów dla ich czasu wykonania, false - jeśli nie.
+
 using namespace std;
 
 void loadDataFromFile(string fileName, int array[], int size); // Wczytywanie danych z pliku tekstowego.
@@ -17,10 +19,18 @@ void heapSort(int array[], int size); // Sortowanie przez kopcowanie.
 
 void countSort(int array[], int size); // Sortowanie przez zliczanie.
 
+#if TIME_TESTS == true
+    void timeTests();
+#endif // TIME_TESTS
+
 const int N = 1000; // Stała przechowująca największą możliwą wartość sortowanego elementu.
 
 int main()
 {
+    #if TIME_TESTS == true
+        timeTests();
+    #endif // TIME_TESTS
+
     cout << "Podaj liczbe elementow, ktore po wylosowaniu zostana posortowane." << endl;
 
     int size;
@@ -28,12 +38,10 @@ int main()
 
     if (size > 1)
     {
-        int array[size], i = 0;
+        int array[size], heapArray[size], countArray[size], i = 0;
 
         // Uzupełniamy tablicę array losowymi liczbami.
         generateRandomData(array, size, getRandomNumber(0, 50));
-
-        int heapArray[size], countArray[size];
 
         // Kopiujemy zawartość tablicy array do tablic heapArray oraz countArray.
         copy(array, array + size, heapArray);
@@ -213,3 +221,49 @@ void generateRandomData(int array[], int size, int max)
         array[i] = getRandomNumber(0, max);
     }
 }
+
+#if TIME_TESTS == true
+    void timeTests()
+    {
+        fstream file;
+        file.open("results/tests.txt", ios::out);
+
+        clock_t time;
+
+        for (int i = 0, c, size, max; i < 3; i++)
+        {
+            // i: 0 - przypadek oczekiwany, 1 - przypadek optymistyczny, 2 - przypadek pesymistyczny
+
+            file << "Przypadek " << (i == 2 ? "pesymistyczny" : i ? "optymistyczny" : "oczekiwany") << endl;
+            max = (i == 2 ? N : i ? 1 : 100);
+
+            for (c = 0, size = 500; c < 9; c++)
+            {
+                int array[size], heapArray[size], countArray[size];
+
+                generateRandomData(array, size, max);
+
+                copy(array, array + size, heapArray);
+                copy(array, array + size, countArray);
+
+                // Dla sortowania przez kopcowanie
+                time = clock();
+                heapSort(heapArray, size);
+
+                file << "heapSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl;
+
+                // Dla sortowania przez zliczanie
+                time = clock();
+                countSort(countArray, size);
+
+                file << "countSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl;
+
+                size *= 2;
+            }
+            file << endl;
+        }
+
+        file.close();
+        cout << "Wykonano testy zlozonosci obliczeniowej algorytmow sortowania. Wyniki znajdziesz w results/tests.txt." << endl;
+    }
+#endif // TIME_TESTS
