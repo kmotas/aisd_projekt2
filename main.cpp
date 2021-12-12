@@ -237,14 +237,12 @@ void generateRandomData(int array[], int size, int max)
             file << "Przypadek " << (i == 2 ? "pesymistyczny" : i ? "optymistyczny" : "oczekiwany") << endl;
             max = (i == 2 ? N : i ? 1 : 100);
 
-            for (c = 0, size = 500; c < 9; c++)
+            for (c = 0, size = 1000; c < 9; c++)
             {
-                int array[size], heapArray[size], countArray[size];
+                int heapArray[size], countArray[size];
 
-                generateRandomData(array, size, max);
-
-                copy(array, array + size, heapArray);
-                copy(array, array + size, countArray);
+                generateRandomData(heapArray, size, max);
+                copy(heapArray, heapArray + size, countArray);
 
                 // Dla sortowania przez kopcowanie
                 time = clock();
@@ -256,7 +254,7 @@ void generateRandomData(int array[], int size, int max)
                 time = clock();
                 countSort(countArray, size);
 
-                file << "countSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl;
+                file << "countSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl << endl;
 
                 size *= 2;
             }

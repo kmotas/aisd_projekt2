@@ -1,0 +1,87 @@
+Przypadek oczekiwany
+heapSort: 1000 elementów, ~0 s.
+countSort: 1000 elementów, ~0 s.
+
+heapSort: 2000 elementów, ~0 s.
+countSort: 2000 elementów, ~0 s.
+
+heapSort: 4000 elementów, ~0.002 s.
+countSort: 4000 elementów, ~0 s.
+
+heapSort: 8000 elementów, ~0.001 s.
+countSort: 8000 elementów, ~0 s.
+
+heapSort: 16000 elementów, ~0.003 s.
+countSort: 16000 elementów, ~0 s.
+
+heapSort: 32000 elementów, ~0.007 s.
+countSort: 32000 elementów, ~0.001 s.
+
+heapSort: 64000 elementów, ~0.015 s.
+countSort: 64000 elementów, ~0 s.
+
+heapSort: 128000 elementów, ~0.031 s.
+countSort: 128000 elementów, ~0.002 s.
+
+heapSort: 256000 elementów, ~0.068 s.
+countSort: 256000 elementów, ~0.003 s.
+
+
+Przypadek optymistyczny
+heapSort: 1000 elementów, ~0 s.
+countSort: 1000 elementów, ~0 s.
+
+heapSort: 2000 elementów, ~0 s.
+countSort: 2000 elementów, ~0 s.
+
+heapSort: 4000 elementów, ~0 s.
+countSort: 4000 elementów, ~0 s.
+
+heapSort: 8000 elementów, ~0.001 s.
+countSort: 8000 elementów, ~0 s.
+
+heapSort: 16000 elementów, ~0.001 s.
+countSort: 16000 elementów, ~0.001 s.
+
+heapSort: 32000 elementów, ~0.003 s.
+countSort: 32000 elementów, ~0 s.
+
+heapSort: 64000 elementów, ~0.005 s.
+countSort: 64000 elementów, ~0.001 s.
+
+heapSort: 128000 elementów, ~0.012 s.
+countSort: 128000 elementów, ~0.001 s.
+
+heapSort: 256000 elementów, ~0.03 s.
+countSort: 256000 elementów, ~0.002 s.
+
+
+Przypadek pesymistyczny
+heapSort: 1000 elementów, ~0 s.
+countSort: 1000 elementów, ~0 s.
+
+heapSort: 2000 elementów, ~0.001 s.
+countSort: 2000 elementów, ~0 s.
+
+heapSort: 4000 elementów, ~0 s.
+countSort: 4000 elementów, ~0 s.
+
+heapSort: 8000 elementów, ~0.001 s.
+countSort: 8000 elementów, ~0 s.
+
+heapSort: 16000 elementów, ~0.003 s.
+countSort: 16000 elementów, ~0 s.
+
+heapSort: 32000 elementów, ~0.006 s.
+countSort: 32000 elementów, ~0 s.
+
+heapSort: 64000 elementów, ~0.015 s.
+countSort: 64000 elementów, ~0.001 s.
+
+heapSort: 128000 elementów, ~0.035 s.
+countSort: 128000 elementów, ~0.001 s.
+
+heapSort: 256000 elementów, ~0.073 s.
+countSort: 256000 elementów, ~0.003 s.
+
+
