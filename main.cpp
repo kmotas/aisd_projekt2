@@ -29,16 +29,21 @@ int main()
     if (size > 1)
     {
         int array[size], i = 0;
+
+        // Uzupełniamy tablicę array losowymi liczbami.
         generateRandomData(array, size, getRandomNumber(0, 50));
 
         int heapArray[size], countArray[size];
 
+        // Kopiujemy zawartość tablicy array do tablic heapArray oraz countArray.
         copy(array, array + size, heapArray);
         copy(array, array + size, countArray);
 
+        // Sortujemy wartości dwoma algorytmami.
         heapSort(heapArray, size);
         countSort(countArray, size);
 
+        // Wypisujemy wartości przed posortowaniem oraz po posortowaniu.
         cout << endl << "Przed posortowaniem:";
         for (; i < size; i++)
         {
