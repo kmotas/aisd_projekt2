@@ -1,87 +1,87 @@
 Przypadek oczekiwany
-heapSort: 1000 elementów, ~0 s.
-countSort: 1000 elementów, ~0 s.
+heapSort: 1000 liczb, 0
+countSort: 1000 liczb, 0
 
-heapSort: 2000 elementów, ~0 s.
-countSort: 2000 elementów, ~0 s.
+heapSort: 2000 liczb, 0
+countSort: 2000 liczb, 0
 
-heapSort: 4000 elementów, ~0.002 s.
-countSort: 4000 elementów, ~0 s.
+heapSort: 4000 liczb, 1
+countSort: 4000 liczb, 0
 
-heapSort: 8000 elementów, ~0.001 s.
-countSort: 8000 elementów, ~0 s.
+heapSort: 8000 liczb, 2
+countSort: 8000 liczb, 0
 
-heapSort: 16000 elementów, ~0.003 s.
-countSort: 16000 elementów, ~0 s.
+heapSort: 16000 liczb, 5
+countSort: 16000 liczb, 0
 
-heapSort: 32000 elementów, ~0.007 s.
-countSort: 32000 elementów, ~0.001 s.
+heapSort: 32000 liczb, 10
+countSort: 32000 liczb, 0
 
-heapSort: 64000 elementów, ~0.015 s.
-countSort: 64000 elementów, ~0 s.
+heapSort: 64000 liczb, 20
+countSort: 64000 liczb, 1
 
-heapSort: 128000 elementów, ~0.031 s.
-countSort: 128000 elementów, ~0.002 s.
+heapSort: 128000 liczb, 43
+countSort: 128000 liczb, 1
 
-heapSort: 256000 elementów, ~0.068 s.
-countSort: 256000 elementów, ~0.003 s.
+heapSort: 256000 liczb, 91
+countSort: 256000 liczb, 3
 
 
 Przypadek optymistyczny
-heapSort: 1000 elementów, ~0 s.
-countSort: 1000 elementów, ~0 s.
+heapSort: 1000 liczb, 0
+countSort: 1000 liczb, 0
 
-heapSort: 2000 elementów, ~0 s.
-countSort: 2000 elementów, ~0 s.
+heapSort: 2000 liczb, 1
+countSort: 2000 liczb, 0
 
-heapSort: 4000 elementów, ~0 s.
-countSort: 4000 elementów, ~0 s.
+heapSort: 4000 liczb, 0
+countSort: 4000 liczb, 0
 
-heapSort: 8000 elementów, ~0.001 s.
-countSort: 8000 elementów, ~0 s.
+heapSort: 8000 liczb, 1
+countSort: 8000 liczb, 0
 
-heapSort: 16000 elementów, ~0.001 s.
-countSort: 16000 elementów, ~0.001 s.
+heapSort: 16000 liczb, 2
+countSort: 16000 liczb, 0
 
-heapSort: 32000 elementów, ~0.003 s.
-countSort: 32000 elementów, ~0 s.
+heapSort: 32000 liczb, 4
+countSort: 32000 liczb, 0
 
-heapSort: 64000 elementów, ~0.005 s.
-countSort: 64000 elementów, ~0.001 s.
+heapSort: 64000 liczb, 9
+countSort: 64000 liczb, 1
 
-heapSort: 128000 elementów, ~0.012 s.
-countSort: 128000 elementów, ~0.001 s.
+heapSort: 128000 liczb, 20
+countSort: 128000 liczb, 0
 
-heapSort: 256000 elementów, ~0.03 s.
-countSort: 256000 elementów, ~0.002 s.
+heapSort: 256000 liczb, 42
+countSort: 256000 liczb, 3
 
 
 Przypadek pesymistyczny
-heapSort: 1000 elementów, ~0 s.
-countSort: 1000 elementów, ~0 s.
+heapSort: 1000 liczb, 0
+countSort: 1000 liczb, 0
 
-heapSort: 2000 elementów, ~0.001 s.
-countSort: 2000 elementów, ~0 s.
+heapSort: 2000 liczb, 1
+countSort: 2000 liczb, 0
 
-heapSort: 4000 elementów, ~0 s.
-countSort: 4000 elementów, ~0 s.
+heapSort: 4000 liczb, 1
+countSort: 4000 liczb, 0
 
-heapSort: 8000 elementów, ~0.001 s.
-countSort: 8000 elementów, ~0 s.
+heapSort: 8000 liczb, 2
+countSort: 8000 liczb, 0
 
-heapSort: 16000 elementów, ~0.003 s.
-countSort: 16000 elementów, ~0 s.
+heapSort: 16000 liczb, 5
+countSort: 16000 liczb, 0
 
-heapSort: 32000 elementów, ~0.006 s.
-countSort: 32000 elementów, ~0 s.
+heapSort: 32000 liczb, 9
+countSort: 32000 liczb, 0
 
-heapSort: 64000 elementów, ~0.015 s.
-countSort: 64000 elementów, ~0.001 s.
+heapSort: 64000 liczb, 21
+countSort: 64000 liczb, 1
 
-heapSort: 128000 elementów, ~0.035 s.
-countSort: 128000 elementów, ~0.001 s.
+heapSort: 128000 liczb, 44
+countSort: 128000 liczb, 1
 
-heapSort: 256000 elementów, ~0.073 s.
-countSort: 256000 elementów, ~0.003 s.
+heapSort: 256000 liczb, 96
+countSort: 256000 liczb, 3
 
 

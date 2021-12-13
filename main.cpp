@@ -2,9 +2,9 @@
 
 #include <iostream> // cout
 #include <fstream> // Funkcje do obsługi plików tekstowych.
-#include <time.h> // clock
+#include <chrono> // Funkcje do pomiaru czasu wykonania funkcji.
 
-#define TIME_TESTS true // true - jeśli chcemy wykonać porównanie algorytmów dla ich czasu wykonania, false - jeśli nie.
+#define TIME_TESTS false // true - jeśli chcemy wykonać porównanie algorytmów dla ich czasu wykonania, false - jeśli nie.
 
 using namespace std;
 
@@ -228,8 +228,6 @@ void generateRandomData(int array[], int size, int max)
         fstream file;
         file.open("results/tests.txt", ios::out);
 
-        clock_t time;
-
         for (int i = 0, c, size, max; i < 3; i++)
         {
             // i: 0 - przypadek oczekiwany, 1 - przypadek optymistyczny, 2 - przypadek pesymistyczny
@@ -245,16 +243,16 @@ void generateRandomData(int array[], int size, int max)
                 copy(heapArray, heapArray + size, countArray);
 
                 // Dla sortowania przez kopcowanie
-                time = clock();
-                heapSort(heapArray, size);
+                auto start = chrono::steady_clock::now();
 
-                file << "heapSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl;
+                heapSort(heapArray, size);
+                file << "heapSort: " << size << " liczb, " << chrono::duration_cast<chrono::milliseconds>(chrono::steady_clock::now() - start).count() << endl;
 
                 // Dla sortowania przez zliczanie
-                time = clock();
-                countSort(countArray, size);
+                start = chrono::steady_clock::now();
 
-                file << "countSort: " << size << " elementów, ~" << (float)(clock() - time) / CLOCKS_PER_SEC << " s." << endl << endl;
+                countSort(countArray, size);
+                file << "countSort: " << size << " liczb, " << chrono::duration_cast<chrono::milliseconds>(chrono::steady_clock::now() - start).count() << endl << endl;
 
                 size *= 2;
             }
