@@ -14,6 +14,8 @@ void saveDataToFile(string fileName, int array[], int size); // Zapisywanie dany
 int getRandomNumber(int min, int max); // Generowanie liczby całkowitej z danego przedziału.
 void generateRandomData(int array[], int size, int max); // Uzupełnianie tablicy array losowymi liczbami całkowitymi z przedziału 0-max.
 
+void makeFile(string fileName, int size, int max); // Generowanie losowego ciągu elementów o zadanej długości i zapisywanie go do pliku tekstowego.
+
 void heapify(int array[], int size, int i); // Budowanie kopca.
 void heapSort(int array[], int size); // Sortowanie przez kopcowanie.
 
@@ -76,6 +78,14 @@ int main()
     }
 
     return 0;
+}
+
+void makeFile(string fileName, int size, int max)
+{
+    int array[size];
+
+    generateRandomData(array, size, max);
+    saveDataToFile(fileName, array, size);
 }
 
 void heapify(int array[], int size, int i)
