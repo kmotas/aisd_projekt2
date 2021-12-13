@@ -4,7 +4,7 @@
 #include <fstream> // Funkcje do obsługi plików tekstowych.
 #include <chrono> // Funkcje do pomiaru czasu wykonania funkcji.
 
-#define TIME_TESTS false // true - jeśli chcemy wykonać porównanie algorytmów dla ich czasu wykonania, false - jeśli nie.
+#define TIME_TESTS true // true - jeśli chcemy wykonać porównanie algorytmów dla ich czasu wykonania, false - jeśli nie.
 
 using namespace std;
 
@@ -23,7 +23,7 @@ void countSort(int array[], int size); // Sortowanie przez zliczanie.
     void timeTests();
 #endif // TIME_TESTS
 
-const int N = 1000; // Stała przechowująca największą możliwą wartość sortowanego elementu.
+const int N = 5000; // Stała przechowująca największą możliwą wartość sortowanego elementu.
 
 int main()
 {

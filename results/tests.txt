@@ -2,7 +2,7 @@ Przypadek oczekiwany
 heapSort: 1000 liczb, 0
 countSort: 1000 liczb, 0
 
-heapSort: 2000 liczb, 0
+heapSort: 2000 liczb, 1
 countSort: 2000 liczb, 0
 
 heapSort: 4000 liczb, 1
@@ -11,8 +11,8 @@ countSort: 4000 liczb, 0
 heapSort: 8000 liczb, 2
 countSort: 8000 liczb, 0
 
-heapSort: 16000 liczb, 5
-countSort: 16000 liczb, 0
+heapSort: 16000 liczb, 4
+countSort: 16000 liczb, 1
 
 heapSort: 32000 liczb, 10
 countSort: 32000 liczb, 0
@@ -21,7 +21,7 @@ heapSort: 64000 liczb, 20
 countSort: 64000 liczb, 1
 
 heapSort: 128000 liczb, 43
-countSort: 128000 liczb, 1
+countSort: 128000 liczb, 2
 
 heapSort: 256000 liczb, 91
 countSort: 256000 liczb, 3
@@ -31,7 +31,7 @@ Przypadek optymistyczny
 heapSort: 1000 liczb, 0
 countSort: 1000 liczb, 0
 
-heapSort: 2000 liczb, 1
+heapSort: 2000 liczb, 0
 countSort: 2000 liczb, 0
 
 heapSort: 4000 liczb, 0
@@ -43,16 +43,16 @@ countSort: 8000 liczb, 0
 heapSort: 16000 liczb, 2
 countSort: 16000 liczb, 0
 
-heapSort: 32000 liczb, 4
+heapSort: 32000 liczb, 5
 countSort: 32000 liczb, 0
 
-heapSort: 64000 liczb, 9
-countSort: 64000 liczb, 1
+heapSort: 64000 liczb, 10
+countSort: 64000 liczb, 0
 
 heapSort: 128000 liczb, 20
-countSort: 128000 liczb, 0
+countSort: 128000 liczb, 1
 
-heapSort: 256000 liczb, 42
+heapSort: 256000 liczb, 44
 countSort: 256000 liczb, 3
 
 
@@ -60,28 +60,28 @@ Przypadek pesymistyczny
 heapSort: 1000 liczb, 0
 countSort: 1000 liczb, 0
 
-heapSort: 2000 liczb, 1
+heapSort: 2000 liczb, 0
 countSort: 2000 liczb, 0
 
 heapSort: 4000 liczb, 1
 countSort: 4000 liczb, 0
 
-heapSort: 8000 liczb, 2
+heapSort: 8000 liczb, 1
 countSort: 8000 liczb, 0
 
-heapSort: 16000 liczb, 5
+heapSort: 16000 liczb, 4
 countSort: 16000 liczb, 0
 
-heapSort: 32000 liczb, 9
+heapSort: 32000 liczb, 11
 countSort: 32000 liczb, 0
 
-heapSort: 64000 liczb, 21
-countSort: 64000 liczb, 1
+heapSort: 64000 liczb, 23
+countSort: 64000 liczb, 0
 
-heapSort: 128000 liczb, 44
+heapSort: 128000 liczb, 49
 countSort: 128000 liczb, 1
 
-heapSort: 256000 liczb, 96
+heapSort: 256000 liczb, 104
 countSort: 256000 liczb, 3
 
 
